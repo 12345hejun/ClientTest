@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            /* 기본값 */
+            /* width: 100%;
+            height: auto; */
+
+            /* 객체의 크기 지정 : 
+                width는 필수 지정, height는 상황에 따라 */
+
+            width: 200px;
+            height: 200px;
+            border: 1px solid  black;
+
+            /* 잘 쓰이는 속성 */
+            /* auto, scroll, hidden, visible */
+            /* 내용물이 넘쳐도 다 보여줘라*/
+            /* overflow: visible;   */
+            /* 내용물 넘치면 무조건 숨김*/
+            /* overflow: hidden;   */
+            /* 스크롤바 */
+            /* overflow: scroll; */
+            /* 선택적으로 보여준다 */
+            overflow: scroll;
+
+            margin-bottom: 70px;
+            /* #tbl1 {margin-top: 50px;} 큰 쪽 여백 적용, 작은 쪽은 없음 */
+        }
+        
+        #tbl1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+        }
+
+        #tbl1 td{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 
+        [06/25]
+        
+        ex18_overflow.html 
+    
+    -->
+
+        <div id="box1">상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.상자입니다.</div>
+
+
+
+        <table id="tbl1">
+            <tr>
+                <td>1</td>
+                <!-- 표는 오버플로우가 안됨 -> td 안에 div태그 사용 -->
+                <td><div style="border: 1px solid red; width: 100px; height: 100px;overflow: auto;">홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.홍길동 입니다.</div></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+</body>
+</html>

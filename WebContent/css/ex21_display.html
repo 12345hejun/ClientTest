@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* display: 요소의 출력 방식을 결정 */
+
+        .box {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            /* 기본값 */
+            display: block;
+            /* 블럭태그가 인라인태그로 바뀜(출력방식이 바뀜) */
+            display: inline;  
+        }
+
+        .link {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            /* 인라인태그가 블럭태그로 바뀜(출력방식이 바뀜) */
+            display: block;
+        }
+
+        #menu ul {
+            border: 1px solid blue;
+            padding: 0;
+        }
+
+        #menu li {
+            /* 인라인인지 블럭태그인지 알려면 border: 1px solid red -> 너비 100% => 블러태그 */
+            border: 0px solid red;
+            /* 인라인 성질을 가지면서 블럭처럼 width으로 지정가능 */
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+
+        /* 많은 인라인 태그를 쓰는데 한줄씩 출력하고 싶을때 */
+        .cat { display: block; margin-bottom: 50px;}
+     
+
+    </style>
+</head>
+<body>
+        <!-- ex21_display.html -->    
+        <!-- 요즘 스타일 <-> ex17_box.html(옛날 스타일) -->
+        <nav id="menu">
+            <ul>
+                <!-- 인라인 태그 스페이스바(공백) 있음 -->
+                <!-- <li>홈</li>
+                <li>회원</li>
+                <li>관리자</li>
+                <li>게시판</li>
+                <li>통계</li> -->
+                <li>홈</li><li>회원</li><li>관리자</li><li>게시판</li><li>통계</li>
+            </ul>
+        </nav>
+
+        <h1>블럭태그</h1>
+        <!-- div#box$.box{상자$}*3 -->
+        <div id="box1" class="box">상자1</div>
+        <div id="box2" class="box">상자2</div>
+        <div id="box3" class="box">상자3</div>
+
+        <h1>인라인태그</h1>
+        <!-- a[href=#]#Link$.link*3 -->
+        <a href="#" id="link1" class="link">링크1</a>        
+        <a href="#" id="link2" class="link">링크2</a>        
+        <a href="#" id="link3" class="link">링크3</a>     
+
+        <h1>고양이</h1>
+
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+        <img src="../images/catty01.png" class="cat">
+
+
+
+</body>
+</html>

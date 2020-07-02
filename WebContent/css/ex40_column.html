@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .item {
+            border: 1px solid black;
+            width: 150px;
+            /* height: 250px; */
+            font-size: 14px;
+            color: #444;
+            margin: 15px auto;
+            border-radius: 3px;
+
+            /* 이미지만 하고 싶은데 텍스트까지 가운데 정렬됨 -> 이미지를 블럭처리 */
+            /* text-align: center; */
+
+            /* 페이지 넘어갈때 짤리는것을 피해라 */
+            page-break-inside: avoid;
+        }
+
+        .item img {
+            /* 인라인을 블럭으로 하면 마진사용 가능 */
+            display: block;
+            margin: 20px auto;
+            box-shadow: -1px -1px 1px black;
+        }
+
+        .item .txt {
+            margin: 0px 12px 15px 12px;
+        }
+
+        #card {
+            border: 1px solid gray;
+            width: 1000px;
+            column-count: 5;            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- ex40_column.html -->
+    <h1>Card Layout</h1>
+
+    <!-- <div class="item">
+        <img src="../images/rect_icon01.png" alt="">
+        <div class="txt">lorem5</div>
+    </div> -->
+
+    <!-- (div.item>(img[src='../images/rect_icon$$.png']+div.txt>lorem5))*20 -->
+    <div id="card">
+    <div class="item">
+        <img src="../images/rect_icon01.png" alt="">
+        <div class="txt">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon02.png" alt="">
+        <div class="txt">Eum, enim perspiciatis. Vel, minus!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon03.png" alt="">
+        <div class="txt">Soluta tempore aliquid ab dolores!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon04.png" alt="">
+        <div class="txt">Adipisci quasi quis numquam similique!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon05.png" alt="">
+        <div class="txt">At dolores quidem quo sint.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon06.png" alt="">
+        <div class="txt">Libero quidem ullam enim nostrum?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon07.png" alt="">
+        <div class="txt">Placeat, recusandae quod? Aliquid, sed.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon08.png" alt="">
+        <div class="txt">Vitae error amet quisquam eveniet.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon09.png" alt="">
+        <div class="txt">Doloribus ipsa sed quibusdam labore?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon10.png" alt="">
+        <div class="txt">Deserunt beatae quo aspernatur rem!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon11.png" alt="">
+        <div class="txt">Dolores soluta nisi voluptatibus perferendis?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon12.png" alt="">
+        <div class="txt">Sunt et vel similique autem.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon13.png" alt="">
+        <div class="txt">Iusto ut expedita aut earum!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon14.png" alt="">
+        <div class="txt">Deserunt ullam ipsum recusandae libero!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon15.png" alt="">
+        <div class="txt">Recusandae quibusdam maxime quisquam quidem.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon16.png" alt="">
+        <div class="txt">Corporis eveniet doloribus tempora reprehenderit.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon17.png" alt="">
+        <div class="txt">Consequatur nesciunt commodi quasi quas!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon18.png" alt="">
+        <div class="txt">Provident id sequi odio eum.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon01.png" alt="">
+        <div class="txt">Aliquam dolor et enim id!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon02.png" alt="">
+        <div class="txt">Repellendus reprehenderit iusto enim officia!</div>
+    </div>
+    </div>
+    
+</body>
+</html>

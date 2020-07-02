@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #box {
+                width: 1400px;
+                height: 780px;
+            }
+
+            .box2 {
+                border: 1px solid black;
+                width: 1400px;
+                height: 151px;
+            }
+
+            .ball {
+                margin-top: 45px;
+                border: 1px solid black;
+                width: 104px;
+                height: 104px;
+                border-radius: 50%;
+                font-size: 4em;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            #ball1 {
+                background-color: red;
+                transition-duration: 2s;
+            }
+
+            #ball2 {
+                background-color: gold;
+                transition-duration: 0.5s;
+            }
+
+            #ball3 {
+                background-color: orange;
+                transition-duration: 1.8s;
+            }
+
+            #ball4 {
+                background-color: greenyellow;
+                transition-duration: 1.2s;
+            }
+
+            #ball5 {
+                background-color: royalblue;
+                transition-duration: 1.5s;
+            }
+
+            #box:hover .ball {
+                transform: translate(1293px, 0px) rotate(3600deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div class="box2">
+                <div id="ball1" class="ball">A</div>
+            </div>
+            <div class="box2">
+                <div id="ball2" class="ball">B</div>
+            </div>
+            <div class="box2">
+                <div id="ball3" class="ball">C</div>
+            </div>
+            <div class="box2">
+                <div id="ball4" class="ball">D</div>
+            </div>
+            <div class="box2">
+                <div id="ball5" class="ball">E</div>
+            </div>
+        </div>
+    </body>
+</html>

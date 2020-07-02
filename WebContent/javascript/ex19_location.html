@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- ex19_location.html -->
+        <input type="button" value="클릭" onclick="f1();" />
+
+        <hr />
+
+        <input type="url" name="txtURL" />
+        <input type="button" value="이동하기" onclick="move();" />
+
+        <script>
+            //onkeydown하면 마지막한글자를 못 얻어옴
+            window.document.all.txtURL.onkeyup = function () {
+                //13 -> Enter
+                if (event.keyCode == 13) {
+                    location.href = event.srcElement.value;
+                }
+            };
+
+            function move() {
+                //form이 없음 중간 객체로 -> all(form 역할을 대신해줌)
+                var url = window.document.all.txtURL.value;
+
+                if (url.startsWith("http://")) {
+                    location.href = url;
+                } else {
+                    //google.com
+                    location.href = "http://" + url;
+                }
+            }
+
+            function f1() {
+                //location 객체
+                // - 브라우저의 현재 주소값에 관련된 행동
+                // - 자바스클립트을 사용한 페이지 이동하기(*****)
+
+                // console.log(location.href);
+                location.href = "ex18_screen.html";
+            }
+
+            window.onkeydown = function () {
+                console.log(event.keyCode);
+                if (event.keyCode == 49) {
+                    //숫자1
+                    location.href = "ex01.html";
+                } else if (event.keyCode == 50) {
+                    //숫자2
+                    location.href = "ex02.html";
+                }
+                if (event.keyCode == 51) {
+                    //숫자3
+                    location.href = "ex03.html";
+                }
+            };
+
+            console.log(window.location.host); //127.0.0.1:5500
+            console.log(window.location.hostname); //127.0.0.1
+            console.log(window.location.protocol); //http:
+            console.log(window.location.port); //5500
+        </script>
+    </body>
+</html>

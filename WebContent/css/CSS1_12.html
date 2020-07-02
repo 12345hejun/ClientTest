@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #list {
+                /* border: 3px solid black; */
+                width: 705px;
+                height: 565px;
+                margin-left: 500px;
+            }
+
+            #list::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+            .A div {
+                border: 3.5px solid black;
+                width: 125px;
+                height: 125px;
+                float: left;
+                overflow: hidden;
+            }
+
+            #list #content1 img {
+                transition-duration: 0.7s;
+                transform: translate(-140px, 0px);
+            }
+
+            #list #content1 div:hover img {
+                transform: translate(0px, 0px);
+            }
+
+            #list #content2 img {
+                transition-duration: 1s;
+                opacity: 0;
+            }
+
+            #list #content2 div:hover img {
+                opacity: 1;
+            }
+
+            #list #content3 img {
+                transform: scale(0, 0);
+                transition-duration: 2s;
+            }
+
+            #list #content3 div:hover img {
+                transform: scale(1, 1);
+            }
+
+            #list #content4 img {
+                transform: translate(0px, -140px) rotate(-360deg);
+                /* transform: rotate(270deg); */
+                transition-duration: 0.5s;
+            }
+
+            #list #content4 div:hover img {
+                transform: translate(0px, 0px);
+                /* transform: rotate(30deg); */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="list">
+            <div id="content1" class="A">
+                <div><img src="../images/rect_icon01.png" alt="" /></div>
+                <div><img src="../images/rect_icon02.png" alt="" /></div>
+                <div><img src="../images/rect_icon03.png" alt="" /></div>
+                <div><img src="../images/rect_icon04.png" alt="" /></div>
+                <div><img src="../images/rect_icon05.png" alt="" /></div>
+            </div>
+
+            <div id="content2" class="A">
+                <div><img src="../images/rect_icon01.png" alt="" /></div>
+                <div><img src="../images/rect_icon02.png" alt="" /></div>
+                <div><img src="../images/rect_icon03.png" alt="" /></div>
+                <div><img src="../images/rect_icon04.png" alt="" /></div>
+                <div><img src="../images/rect_icon05.png" alt="" /></div>
+            </div>
+
+            <div id="content3" class="A">
+                <div><img src="../images/rect_icon01.png" alt="" /></div>
+                <div><img src="../images/rect_icon02.png" alt="" /></div>
+                <div><img src="../images/rect_icon03.png" alt="" /></div>
+                <div><img src="../images/rect_icon04.png" alt="" /></div>
+                <div><img src="../images/rect_icon05.png" alt="" /></div>
+            </div>
+
+            <div id="content4" class="A">
+                <div><img src="../images/rect_icon01.png" alt="" /></div>
+                <div><img src="../images/rect_icon02.png" alt="" /></div>
+                <div><img src="../images/rect_icon03.png" alt="" /></div>
+                <div><img src="../images/rect_icon04.png" alt="" /></div>
+                <div><img src="../images/rect_icon05.png" alt="" /></div>
+            </div>
+        </div>
+    </body>
+</html>

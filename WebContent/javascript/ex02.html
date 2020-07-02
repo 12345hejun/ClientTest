@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            //alert("하나"); //block
+            //alert("둘"); //block
+            // 선언된 변수가 아래 있고 호출이 먼저 나옴
+            // 태그를 읽고 난뒤 조작을 해야됨.
+            document.all.txt1.value = new Date();
+        </script>
+    </head>
+    <body>
+        <!-- ex02.html -->
+        <h1>자바스클립트 실행 순서(***)</h1>
+
+        <input type="text" name="txt1" size="50" />
+
+        <script>
+            //alert("셋");
+            // document.all.txt1.value = new Date(); //현재 시간
+        </script>
+    </body>
+</html>

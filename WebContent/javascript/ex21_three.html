@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- ex21_three.html -->
+        <!-- 결과 통보 페이지(성공, 실패) -->
+
+        <script>
+            //가입 O
+            // alert("회원가입 성공!!");
+
+            //가입 X
+            alert("회원가입 실패!!");
+
+            // 다시 입력을 위해서 첫번째 페이지로 자동 이동하기
+            // 서버로부터 새로운(초기상태)로 받아와라
+            // location.href = "ex21_one.html";
+
+            // 뒤로가기 2번
+            // history.back();
+            // 페이지 이동이 아니라 타임머신 같은거
+            history.go(-2);
+
+            //은행이나 공공장소는 100% 지워지게 location.href 사용 보안 때문에
+        </script>
+    </body>
+</html>

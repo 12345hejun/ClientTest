@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- ex18_screen.html -->
+        <!-- 
+
+        BOM
+        window
+            - screen
+            - location
+            - history
+            - document
+                - image
+                - radio
+                - form
+                    - text
+                    - radio
+                        - option
+                    - select
+                    - file
+                    - button
+     -->
+
+        <script>
+            // 현재 해상도, 잘 안쓰임
+            console.log(window.screen.width);
+            console.log(window.screen.height);
+
+            // 사용가능한 너비, 높이( - 작업표시줄 )
+            console.log(window.screen.availWidth); //***
+            console.log(window.screen.availHeight); //***
+
+            //landscape-primary(가로비율-주모니터)
+            console.log(window.screen.orientation); //*
+
+            //24bit color, 잘 안쓰임
+            console.log(window.screen.colorDepth);
+        </script>
+    </body>
+</html>

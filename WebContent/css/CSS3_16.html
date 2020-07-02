@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #clock {
+                border: 15px solid #666666;
+                width: 700px;
+                height: 700px;
+                border-style: dashed;
+                text-align: center;
+                color: white;
+            }
+
+            #hour {
+                border: 13px solid #666666;
+                width: 81px;
+                height: 320px;
+                margin-left: 305px;
+                border-radius: 50px;
+                background-color: tomato;
+
+                transition-property: all;
+                transition-duration: 360s;
+                transform-origin: center bottom;
+            }
+
+            #clock:hover #hour {
+                transform: rotate(3600deg);
+            }
+
+            #min {
+                border: 13px solid #666666;
+                width: 81px;
+                height: 320px;
+                margin-left: 305px;
+                border-radius: 50px;
+                background-color: cornflowerblue;
+
+                transition-property: all;
+                transition-duration: 60s;
+                transform-origin: center bottom;
+
+                position: relative;
+                top: -337px;
+            }
+
+            #clock:hover #min {
+                transform: rotate(3600deg);
+            }
+
+            #sec {
+                border: 13px solid #666666;
+                width: 81px;
+                height: 320px;
+                margin-left: 305px;
+                border-radius: 50px;
+                background-color: gold;
+
+                transition-property: all;
+                transition-duration: 10s;
+                transform-origin: center bottom;
+
+                position: relative;
+                top: -684px;
+            }
+
+            #clock:hover #sec {
+                transform: rotate(3600deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 700px; margin: 30px auto;">
+            <h1 style="margin-top: 0px;">
+                transform(rotate) + transform-origin + transition
+            </h1>
+            <div
+                style="
+                    margin: 20px 0px;
+                    border-left: 3px dotted gray;
+                    padding-left: 10px;
+                "
+            >
+                시계침을 돌리시오.
+            </div>
+            <div id="clock">
+                <div id="hour">
+                    <div>Hour</div>
+                </div>
+                <div id="min">
+                    <div>Min</div>
+                </div>
+                <div id="sec">
+                    <div>Sec</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list1 {
+            /* bullet 변경 */
+            list-style-type: none;
+            list-style-image: url(../images/bullet09.png);
+            font-size: 2em;
+            
+            
+            
+        }
+
+        #list1 li {
+
+        }
+
+        #list2 {
+            font-size: 2em;  
+            border: 0px solid black;          
+            padding-left: 20px;
+        }
+
+        #list2 li {            
+            border: 0px solid black;
+            background-image: url(../images/bullet09.png);
+            background-repeat: no-repeat;
+            /* 이미지를 움직이면 이미지가 짤림 */
+            /* background-position: -3px center; */
+            background-position: 0px center;
+            padding-left: 15px;
+            list-style: none;
+        }
+
+        #naver {
+            /* 여러 이미지중 하나 짤라오기 */
+            border: 0px solid black;
+            width: 450px;
+            height: 110px;
+            background-image: url(../images/sp_main.44265f.png);
+            background-position: 0px -320px;
+        }
+
+        #mode {
+            /* 여러 이미지중 하나 짤라오기 */
+            border: 0px solid black;
+            width: 280px;
+            height: 120px;
+            background-image: url(../images/sp_main.44265f.png);
+            background-position: -548px -230px;
+            /* background-position: -548px -110px; */
+        }
+
+        #mode:hover {
+            background-position: -548px -115px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex27_list.html -->
+    <h1>오늘의 할일</h1>
+    <ul id="list1">
+        <li>비주얼 스튜디오 코드 설치하기</li>
+        <li>이클립스 설치하기</li>
+        <li>오라클 설치하기</li>
+        <li>크롬 설치하기</li>
+    </ul>
+
+    <h1>오늘의 할일</h1>
+    <ul id="list2">
+        <li>비주얼 스튜디오 코드 설치하기</li>
+        <li>이클립스 설치하기</li>
+        <li>오라클 설치하기</li>
+        <li>크롬 설치하기</li>
+    </ul>
+
+    <hr>
+
+    <!-- <img src="../images/sp_main.44265f.png" alt=""> -->
+
+    <div id="naver"></div>
+
+
+    <div id="mode"></div>
+
+</body>
+</html>

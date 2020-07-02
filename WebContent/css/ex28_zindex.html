@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cat {
+            position: absolute;
+            
+            /* left: 0;
+            top: 0px;  */
+           
+        }
+
+        #cat1 { z-index: 1; left: 0px; top: 0px;}
+        #cat2 { left: 125px; top: 90px; }
+        #cat3 { left: 200px; top: 150px; z-index: 2;}
+
+        #box {
+            border: 10px solid black;
+            width: 1250px;
+            
+        }
+
+        #box .cats{
+            /* 블럭 태크로 만들었는데 세로 한줄로 나옴 */
+            display: block;
+            /*  */
+            float: left;
+            opacity: .6; /* 불투명도(0~1) */
+        }
+
+        #box .cats:hover {
+            opacity: 1;
+            position: relative;
+            /* left: 0;
+            top: -10px;
+            width: 300px; */
+        }
+
+        .content {
+            opacity: .7;
+        }
+
+        .content > span {
+            /* color: red; */
+            /* text-decoration: underline; */
+            border-bottom: 1px dashed gray;
+        }
+
+        .content > span:hover {
+            opacity: 1;
+            color: red;
+        }
+
+        .data {
+            outline: none;
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
+
+        /* indicator */
+        .data:focus {
+            background-color: burlywood;
+            border-color: red   
+        }
+
+    </style>
+</head>
+<body>
+    <!-- [06/26] -->
+    <!-- ex28_zindex.html -->
+    <img src="../images/cat01.jpg" class="cat" id="cat1">
+    <img src="../images/cat02.jpg" class="cat" id="cat2">
+    <img src="../images/cat03.jpg" class="cat" id="cat3">
+
+    <hr style="margin-top: 400px;">
+
+    <!-- 인라인 태그들이 연속적으로 올때 객체 사이에 공백이 생김 -->
+    <!-- 그림과 그림사이 공백 제거방법1.(나쁨) -->
+    <!-- 1. 귀찮음, 2.코드관리 어려움 -->
+    <!-- <div id="box">
+        <img src="../images/cat01.jpg" class="cats" ><img src="../images/cat02.jpg" class="cats" ><img src="../images/cat03.jpg" class="cats" >
+        <img src="../images/cat04.jpg" class="cats" >
+        <img src="../images/cat05.jpg" class="cats" >
+    </div> -->
+
+    <!-- 그림과 그림사이 공백 제거방법2.(좋음) -->
+    <!-- 블럭태그로 만들기 -->
+    <!-- float 사용 -->
+    <!-- 마지막 만들어서 clear 시키기 -->
+    <div id="box">
+        <img src="../images/cat01.jpg" class="cats" >
+        <img src="../images/cat02.jpg" class="cats" >
+        <img src="../images/cat03.jpg" class="cats" >
+        <img src="../images/cat04.jpg" class="cats" >
+        <img src="../images/cat05.jpg" class="cats" >
+        <div style="clear:both"></div>
+    </div>
+
+    <!-- :hover / :focus -->
+    <h1>제목입니다.</h1>
+    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nulla voluptatum qui incidunt asperiores doloribus voluptas. Tenetur dolores perferendis porro ea fugiat autem, animi modi consequuntur <span>beatae</span> consequatur, tempora mollitia velit possimus assumenda inventore deseruntlaborum molestiae hic amet <span>eligendi</span>rem. Iusto quisquam sit atque inventore, voluptates cumque quos qui enim provident. Dicta libero temporibus nobis accusantium molestias, sit earum eaque ut ipsum assumenda eius voluptas beatae dolores nisi quis maiores culpa? <span>Inventore</span>, eos unde! Eligendi perferendis veniam amet quis animi ipsam, minus facilis iusto quibusdam quo distinctio quae, illum alias eum sit ab reprehenderit odit incidunt doloremque nostrum eaque.</p>
+
+    <hr>
+
+    <h1>입력 화면</h1>
+    
+    <div>데이터<input type="text" class="data"></div>
+    <div>짧은 데이터<input type="text" class="data" size="10"></div>
+    <div>긴데이터<input type="text" class="data" size="50"></div>
+
+    <div>데이터<input type="text" class="data"></div>
+    <div>짧은 데이터<input type="text" class="data" size="10"></div>
+    <div>긴데이터<input type="text" class="data" size="50"></div>
+    <div>데이터<input type="text" class="data"></div>
+    <div>짧은 데이터<input type="text" class="data" size="10"></div>
+    <div>긴데이터<input type="text" class="data" size="50"></div>
+    <div>데이터<input type="text" class="data"></div>
+    <div>짧은 데이터<input type="text" class="data" size="10"></div>
+    <div>긴데이터<input type="text" class="data" size="50"></div>
+    <div>데이터<input type="text" class="data"></div>
+    <div>짧은 데이터<input type="text" class="data" size="10"></div>
+    <div>긴데이터<input type="text" class="data" size="50"></div>
+
+</body>
+</html>

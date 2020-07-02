@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #search { height: 18px; width: 300px; outline: none;}
+        #btn {}
+
+        #list {
+            position: absolute;            
+            left: 57px;
+            top: 25px;
+            background-color: white;
+            border: 1px solid gray;
+            width: 306px;
+            display: block;
+        }
+
+        #list .item{
+            margin: 10px;
+        }
+
+        #main {
+            /* 너비가 고정이 되어야지 블럭태그도 움직일수 있다. 마진사용 가능 */
+            width: 800px;
+            margin: 0px auto;
+            /*  */
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex26_position.html -->
+
+    <div id="main">
+        <header>
+            검색어:
+            <input type="text" id="search" autocomplete="off">
+            <input type="button" value="검색하기" id="btn">
+        </header>
+        <section>
+            <!-- ((h1>lorem)+(p>lorem))*5 -->
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum quaerat ex corrupti vitae! Earum optio, voluptatum perferendis non voluptates obcaecati consequatur quae aliquid sunt dolorum. Sit iusto facere vero inventore.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aperiam porro dicta adipisci illum soluta laudantium minima tenetur facilis, mollitia quis nobis, laborum voluptatum enim dignissimos numquam beatae repudiandae harum.</p>
+            <h1>Incidunt libero facere veniam at, assumenda maxime voluptate porro rerum cupiditate perspiciatis minus suscipit, architecto blanditiis praesentium repudiandae qui ut. Hic, totam ratione harum autem cupiditate non quis dolores quae!</h1>
+            <p>Magni hic quidem, quasi quibusdam culpa eius incidunt repellendus quo totam pariatur dolorem! Perferendis recusandae at in, reprehenderit quas, sit quasi similique itaque eum numquam adipisci vero, exercitationem illo minus!</p>
+            <h1>Accusamus alias dicta unde error ipsam placeat ad facilis repellendus consectetur maxime expedita, mollitia eum in, laboriosam blanditiis a ducimus doloribus inventore. Enim pariatur aliquam alias qui placeat minima delectus.</h1>
+            <p>Laborum, beatae vel blanditiis nemo itaque id velit est rem distinctio ratione laboriosam saepe reiciendis officia. Incidunt, iure illo voluptatem eveniet quam corrupti recusandae dolores quaerat necessitatibus at dolorum quas.</p>
+            <h1>Dicta error, quisquam corrupti officia eos debitis iure unde sequi soluta quae natus facere illo iusto alias illum vitae pariatur ipsa sed beatae nobis. Voluptates numquam corporis fugit alias aspernatur?</h1>
+            <p>Tempore libero, commodi provident delectus exercitationem neque quod laudantium excepturi dicta voluptas. Suscipit quia numquam atque tenetur molestiae mollitia neque repudiandae, laudantium odit quasi! Nihil eaque pariatur reprehenderit placeat atque.</p>
+            <h1>Molestiae exercitationem minima eaque delectus deserunt ipsum dolorum laudantium odit! Aspernatur, ad suscipit in iusto excepturi odit magnam architecto facilis tenetur temporibus explicabo non soluta cupiditate et praesentium quasi error!</h1>
+            <p>Officia, fuga vitae repellendus ad totam eos deleniti expedita sit nobis et odit ullam, dicta laborum id error, pariatur quaerat alias. Illum impedit incidunt provident reiciendis eaque obcaecati, alias doloremque?</p>
+        </section>
+
+
+        <div id="list">
+            <div class="item">자바</div>
+            <div class="item">오라클</div>
+            <div class="item">HTML</div>
+            <div class="item">JavaScript</div>
+            <div class="item">CSS</div>
+            <div class="item">JDBC</div>        
+        </div>
+
+    </div> <!-- main -->
+
+    
+
+</body>
+</html>

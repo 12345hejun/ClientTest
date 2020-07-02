@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* float: 기존 출력 정책을 벗어나, 기존의 위치에 속한 라인의 가장 좌측(우측)으로 이동한다. */
+
+        #pic {
+            /* float: left : right : none */
+            float: left;
+        }
+
+        #notice {            
+            border-bottom: 1px dashed gray;
+        }
+
+        #notice small {
+            float: right;
+            /* 살짝 올라가 있어서 */
+            margin-top: 6px;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+            float: left;
+        }
+
+        #box1 {background-color: red;}
+        #box2 {background-color: orange;}
+        #box3 {background-color: yellow;}
+        #box4 {background-color: green;}
+        #box5 {background-color: blue;}
+
+    </style>
+</head>
+<body>
+    <!-- ex22_float.html -->
+    <h1>대표 인사</h1>
+
+    <p>
+        <img src="../images/man_02.png" id="pic">
+        안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 
+        <!-- 원래 있던 라인에서 좌측(우측)으로 이동-->
+        <b style="float: left; color: red;">아무개</b>홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.안녕하세요. 홍길동입니다.
+    </p>
+
+    <hr>
+
+    <h2 id="notice">공지 사항 <small>한독빌딩 임직원</small></h2>
+    <!-- p>lorem100 -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate voluptatibus doloremque odio, exercitationem id vitae adipisci, tenetur voluptas ducimus ullam libero, temporibus neque perspiciatis voluptatum eveniet placeat amet. Tempore tenetur quaerat officia sint recusandae nisi ipsam delectus, optio iure blanditiis dolorem porro dolorum perferendis dolores, doloribus commodi voluptas molestiae quas dignissimos, dolor maiores possimus animi dicta! Consectetur cupiditate in suscipit a ipsa consequuntur dolore accusantium ut libero aut debitis voluptas, obcaecati quasi rerum voluptatibus. Doloribus quas voluptatibus at eligendi! Non adipisci ipsa eius ratione quaerat at eligendi reprehenderit, explicabo voluptates libero eos molestias nostrum exercitationem, saepe hic sunt nisi delectus?</p>
+
+    <hr>
+
+    <!-- div#box$.box{상자$}*5 -->
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <div id="box4" class="box">상자4</div>
+    <div id="box5" class="box">상자5</div>
+
+    <!-- 앞에 내용이 float라 다음 라인이 말려 올라감 -->
+    <!-- float: left 지우는법. 보통 편하게 both 사용 -->
+    <!-- 다음 줄로 새로 시작 -->
+    <div style="clear: both;">추가내용입니다.</div>
+    나머지...
+
+</body>
+</html>

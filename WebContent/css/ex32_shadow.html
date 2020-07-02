@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1:hover {
+            /* text-shadow: h-shadow(x좌표) v-shadow(Y좌표) blur(그림자 진함) color */
+            text-shadow: 3px 3px 2px #777;
+        }
+        #p2 {
+            border: 1px solid white;
+        }
+
+        #p2:hover {
+            border: 1px solid #777;
+            box-shadow: 3px 3px 2px #777;
+        }
+
+        .icon:hover {
+            box-shadow: 0px 10px 5px #555;
+            /* margin-top: -3px; */
+            transform:  translate(0px, -5px);
+        }
+
+        /* #list li {
+            border: 1px solid white;
+        } */
+
+        #list li:hover {
+            /* color: red; */
+            /* border: 1px solid red; */
+            /* outline 객채 면적 포함X -> 흔들림 없음, 위아래 제약을 못줌 */
+            outline: 1px solid red;
+        }
+
+        #box1, #box2 {
+            border: 1px solid black;
+            width: 300px;
+            /* height: 20px;             */
+            overflow: hidden;
+            /* 자동개행 되는 성질 없애는거 */
+            white-space: nowrap;
+
+            margin-bottom: 50px;
+        }
+
+        #box1 {text-overflow: clip;}
+        /* ...생략 */
+        #box2 {text-overflow: ellipsis;}
+
+
+    </style>
+</head>
+<body>
+    <!-- ex32_shadow.html -->
+    <!-- (p#p$>lorem)*3 -->
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio explicabo blanditiis quis dolorem accusantium! Eos voluptatum harum quas! Ex veniam sint atque corporis molestiae, quibusdam quia ipsa dolorum totam officia!</p>
+    <p id="p2">Libero odit ut vitae, incidunt quasi voluptatem obcaecati esse dicta cum nostrum. Ad harum illum fugiat rem atque natus eaque non labore reiciendis! Hic expedita quos autem voluptate, accusamus esse.</p>
+    <p id="p3">Perferendis deserunt repellendus magnam aspernatur neque. Quis alias dolores enim quidem saepe eaque tenetur doloribus provident? Maxime deleniti quam sint iusto, inventore molestiae architecto, provident in fuga enim quo ad?</p>
+
+    <hr>
+
+    <img src="../images/rect_icon01.png" class="icon">
+    <img src="../images/rect_icon02.png" class="icon">
+    <img src="../images/rect_icon03.png" class="icon">
+    <img src="../images/rect_icon04.png" class="icon">
+    <img src="../images/rect_icon05.png" class="icon">
+
+    <hr>
+
+    <h1>오늘의 할일</h1>
+
+    <ul id="list">
+        <li>빨리 집에 가기</li>
+        <li>밥먹기</li>
+        <li>잠자기</li>
+        <li>쪼금 공부하기</li>        
+    </ul>
+
+
+    <hr>
+
+    <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, saepe!</div>
+    <div id="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, saepe!</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

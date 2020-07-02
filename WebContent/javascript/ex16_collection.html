@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- ex16_collection.html -->
+        <h1>이미지</h1>
+        <img src="../images/catty01.png" alt="" />
+        <img src="../images/catty02.png" alt="" />
+        <img src="../images/catty03.png" alt="" />
+        <img src="../images/catty04.png" alt="" />
+        <img src="../images/catty05.png" alt="" />
+
+        <h1>링크</h1>
+        <!-- images -->
+        <a href="#">네이버</a>
+        <!-- anchors -->
+        <a name="a">A 표지판</a>
+        <a href="#">다음</a>
+        <a name="a">B 표지만</a>
+        <a href="#">구글</a>
+
+        <h1>폼</h1>
+        <form name="form1">
+            <input type="text" name="txt1" />
+            <input type="text" name="txt2" />
+            <input type="button" value="전송" name="btn1" />
+        </form>
+
+        <script>
+            //JavaScript가 문서 내용을 기반으로 자동 생성하는 배열
+            //1. window.document.images : 문서상의 모든 <img> 태그 배열
+            //2. window.document.links : 문서상의 모든 <a href=""> 태그 배열
+            //3. window.document.anchors : 문서상의 모든 <a name="" id="> 태그 배열
+            //4. window.document.forms : 문서상의 모든 <form> 태그 배열
+            //5. window.document.forms[1].elements : 특정 폼의 하위 입력 태그 배열
+            //6. window.document.all : 문서상의 모든 태그 배열, 비표준(MS), 대부분 브라우저 지원
+
+            //1.
+            console.log(window.document.images.length); //5
+            console.log(window.document.images); //HTMLCollection(5) [img, img, img, img, img]
+
+            //2.
+            console.log(window.document.links.length); //3
+            //3.
+            console.log(window.document.anchors.length); //2
+
+            //4.
+            console.log(window.document.forms.length); //1
+            // window.document.form1; //아래랑 같은 표현
+            window.document.forms[0].txt1.value = "확인";
+
+            //5.
+            console.log(window.document.forms[0].elements.length); //3
+
+            //6.
+            //1. 모든 태그 집합(BOM에 없는 태그조차)
+            //2. 계층에 상관없이 하나의 집합
+            console.log(window.document.all.length); //24 현재문서상 모든 태그
+
+            var alist = window.document.all;
+
+            for (var i = 0; i < alist.length; i++) {
+                console.log(alist[i].nodeName); //DOM
+            }
+        </script>
+    </body>
+</html>

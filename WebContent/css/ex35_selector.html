@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        
+        1. :disabled
+        2. :enabled
+
+        3. :required
+        4. :optional
+
+        5. :read-only
+
+        6. :focus
+        7. :checked
+        
+         */
+        input {
+            outline: none;
+            border: 1px solid #999; 
+            padding: 3px;
+            background-color: white;
+            margin-bottom: 3px;
+        }
+
+        input:disabled {
+            background-color: #ccc;
+            /* 금지 표시 */
+            cursor: not-allowed;
+        }
+
+        input:enabled:hover {
+            /* background-color: chartreuse; */
+            border: 1px solid red
+        }
+
+        input:required {
+            background-color: tomato;
+        }
+
+        input:optional {
+            /* background: blue; */
+        }
+
+        input:read-only {
+            cursor: not-allowed;
+        }
+
+        input[type=checkbox] {
+
+            /* 안 먹음 */
+            /* background-color: red; */
+            /* border: 1px solid blue; */
+
+            /* width: 200px; */
+            /* display: none; */
+            /* opacity: .3; */
+            
+        }
+
+        input[type=checkbox]:checked{
+            /* 흐리게 */
+            /* opacity: 1; */            
+        }
+
+        div > input + img {
+            opacity: .3;
+        }
+
+        div > input:checked +img {
+            opacity: 1;
+        }
+
+        .line img {
+            opacity:  .1;           
+        }
+
+        .line .data.focus + img {
+                opacity: 1;
+            }
+
+        #cb1 + div {
+            display: none;
+        }
+
+        #cb1:checked + div {
+            display: block;
+        }
+
+        .item {
+            border: 1px solid gray;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .item > .cb {
+            display: none;
+        }
+
+        .item > label {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .item > div {
+            border-top: 1px solid gray;
+            padding: 5px;
+            display: none;
+        }
+        
+        .item > .cb:checked +label +div {
+            display: block;
+        }
+
+        /* 위에랑 같은 */
+        .item .cb:checked ~ div {
+            /* display: block; */
+        }
+
+        p > span {color: red;}
+
+        /* 내용물 처음에 삽입 span직전에 */
+        p > span::before {
+            content: '['
+        }
+
+        /* 내용물 끝에 삽입 span후에 */
+        p > span::after {
+            content: ']'
+        }
+
+        #catlist1, #catlist2 {
+            border: 10px solid gray;
+            margin-bottom: 10px;
+        }
+        
+        #catlist1 > img {
+            float: left;
+        }
+
+        #catlist2 > img {
+            float: left;
+        }
+
+        #catlist2::after{
+            
+            /* <div style="clear:both;"><div> */
+            /* 위에랑 같은 표현 */
+            content: " ";
+            clear: both;
+            display: block;
+        }
+
+        body { margin-bottom: 300px; }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false">
+    <!-- ex35_selector.html -->
+    <h1>폼 관련 선택자</h1>
+    
+    <h2>체크 박스</h2>
+    <div><input type="checkbox"><img src="../images/catty01.png"></div>
+    <div><input type="checkbox"><img src="../images/catty02.png"></div>
+    <div><input type="checkbox"><img src="../images/catty03.png"></div>
+
+
+    <h2>텍스트 박스</h2>
+    <!-- required: 필수입력, disabled:비활성화, readonly: 읽기전용 -->
+    <div><input type="text" required></div>
+    <div><input type="text" readonly></div>
+    <div><input type="text" disabled></div>
+    <div><input type="text"></div>
+    <div><input type="text" required></div>
+    <div><input type="text"></div>
+    <div><input type="text" required></div>
+    <div><input type="text"></div>
+    <div><input type="text" disabled></div>
+    <div><input type="text" readonly></div>
+
+    <h2>데이터 입력</h2>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+    <div class=:line>
+        <input type="text" class="data">
+        <img src="../images/bullet01.png">
+    </div>
+
+    <h2>콘텐츠</h2>
+
+    설명 감추기<input type="checkbox" id="cb1">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dignissimos maxime eligendi, aspernatur veritatis placeat quaerat! Saepe, commodi. Ab unde pariatur aut ullam quae quisquam ea, iste temporibus dicta dolorem!</div>
+
+    <h2>콘텐츠</h2>
+
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb2"><label for="cb2">Lorem, ipsum dolor.</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis itaque cumque corrupti illo velit repellat explicabo molestiae accusamus. Animi enim eos ipsum in quasi molestias delectus a quibusdam. Fugiat culpa ratione cupiditate harum repudiandae! Dolorem commodi similique libero incidunt officiis, quis, maxime tempore, earum odio iure facilis impedit debitis.</div>        
+    </div>
+
+    
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb3"><label for="cb3">Lorem, ipsum dolor.</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis itaque cumque corrupti illo velit repellat explicabo molestiae accusamus. Animi enim eos ipsum in quasi molestias delectus a quibusdam. Fugiat culpa ratione cupiditate harum repudiandae! Dolorem commodi similique libero incidunt officiis, quis, maxime tempore, earum odio iure facilis impedit debitis.</div>        
+    </div>
+
+    
+    <div class="item">
+        <input type="checkbox" class="cb" id="cb4"><label for="cb4">Lorem, ipsum dolor.</label>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit facilis itaque cumque corrupti illo velit repellat explicabo molestiae accusamus. Animi enim eos ipsum in quasi molestias delectus a quibusdam. Fugiat culpa ratione cupiditate harum repudiandae! Dolorem commodi similique libero incidunt officiis, quis, maxime tempore, earum odio iure facilis impedit debitis.</div>        
+    </div>
+
+    <h2>전,후 선택자</h2>
+    <p>Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Inventore modi, et numquam impedit eum aliquam facere officia? Soluta officiis <span> excepturi</span>, placeat reiciendis laboriosam voluptate at, vitae adipisci officia voluptatibus cum, ratione perspiciatis. Cum eos dolorem a corrupti molestias, <span>deserunt</span> exercitationem non nulla maiores in totam amet impedit sunt quas eius!</p>
+
+    <h2>float 속성 + after 속성</h2>
+    <div id="catlist1">
+        <img src="../images/catty01.png">
+        <img src="../images/catty02.png">
+        <img src="../images/catty03.png">
+        <img src="../images/catty04.png">
+        <img src="../images/catty05.png">        
+        <div style="clear: both;"></div>
+    </div>
+
+    <div id="catlist2">
+        <img src="../images/catty01.png">
+        <img src="../images/catty02.png">
+        <img src="../images/catty03.png">
+        <img src="../images/catty04.png">
+        <img src="../images/catty05.png">
+    </div>
+
+</body>
+</html>
