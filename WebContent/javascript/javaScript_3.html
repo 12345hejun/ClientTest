@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        form {
+            border: 1px solid black;
+            width: 500px;
+            height: 250px;
+        }
+
+        #left {
+            border: 1px solid black;
+            width: 200px;
+            height: 240px;
+            float: left;
+        }
+
+        #left input {
+            /* border: 1px solid black; */
+            width: 150px;
+            height: 38px;
+            margin-left: 25px;
+            margin-top: 8px;
+        }
+
+        #right {
+            /* border: 1px solid red; */
+            width: 500px;
+            height: 240px;
+        }
+
+        #right img {
+            /* border: 1px solid red; */
+            width: 250px;
+            height: 190px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <body>
+        <form name="box1">
+            <div id="left">
+                <input
+                    type="button"
+                    value="강아지1"
+                    name="btn1"
+                    data-index="0"
+                />
+                <input
+                    type="button"
+                    value="강아지2"
+                    name="btn2"
+                    data-index="1"
+                />
+                <input
+                    type="button"
+                    value="강아지3"
+                    name="btn3"
+                    data-index="2"
+                />
+                <input
+                    type="button"
+                    value="강아지4"
+                    name="btn4"
+                    data-index="3"
+                />
+                <input
+                    type="button"
+                    value="강아지5"
+                    name="btn5"
+                    data-index="4"
+                />
+                <div style="clear: both;"></div>
+            </div>
+            <div id="right"><img src="../images/dog01.jpg" name="img" /></div>
+        </form>
+    </body>
+
+    <script>
+        var list = [
+            "dog01.jpg",
+            "dog02.jpg",
+            "dog03.jpg",
+            "dog04.jpg",
+            "dog05.jpg",
+        ];
+
+        var img = document.images["img"];
+
+        var btn1 = document.box1["btn1"];
+        var btn2 = document.box1["btn2"];
+        var btn3 = document.box1["btn3"];
+        var btn4 = document.box1["btn4"];
+        var btn5 = document.box1["btn5"];
+
+        btn1.onmouseover = function () {
+            img.src = "../images/" + list[0];
+        };
+
+        btn2.onmouseover = function () {
+            img.src = "../images/" + list[1];
+        };
+
+        btn3.onmouseover = function () {
+            img.src = "../images/" + list[2];
+        };
+
+        btn4.onmouseover = function () {
+            img.src = "../images/" + list[3];
+        };
+
+        btn5.onmouseover = function () {
+            img.src = "../images/" + list[4];
+        };
+
+        btn1.onclick = function () {
+            window.open(
+                // 창 열기
+                "../images/dog01_big.jpg",
+                "dog",
+                "width=1000px, height= 1000px" //새창 크기
+            );
+        };
+
+        btn2.onclick = function () {
+            window.open(
+                // 창 열기
+                "../images/dog02_big.jpg",
+                "dog",
+                "width=1000px, height= 1000px" //새창 크기
+            );
+        };
+
+        btn3.onclick = function () {
+            window.open(
+                // 창 열기
+                "../images/dog03_big.jpg",
+                "dog",
+                "width=1000px, height= 1000px" //새창 크기
+            );
+        };
+
+        btn4.onclick = function () {
+            window.open(
+                // 창 열기
+                "../images/dog04_big.jpg",
+                "dog",
+                "width=1000px, height= 1000px" //새창 크기
+            );
+        };
+
+        btn5.onclick = function () {
+            window.open(
+                // 창 열기
+                "../images/dog05_big.jpg",
+                "dog",
+                "width=1000px, height= 1000px" //새창 크기
+            );
+        };
+    </script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+    </head>
+
+    <body>
+        <!-- javaScript_1.html -->
+
+        <div>
+            <input
+                type="text"
+                id="txt1"
+                name="txt1"
+                value="00"
+                style="width: 250px; height: 250px; font-size: 50px;"
+            />
+        </div>
+
+        <img src="../images/0.png" name="number2" />
+        <img src="../images/0.png" name="number1" />
+
+        <script>
+            var number1 = document.images["number1"];
+            var number2 = document.images["number2"];
+            var txt1 = window.document.all.txt1;
+
+            var n1 = 1;
+            var n2 = 1;
+            var n3 = 0;
+
+            var n4 = 0;
+            var n5 = 0;
+
+            window.onclick = function () {
+                number1.src = "../images/" + n1 + ".png";
+                n1++;
+                n3++;
+
+                if (n1 > 9) {
+                    n1 = 0;
+                }
+
+                // console.log(n3 % 10 == 0);
+                // console.log(n3);
+
+                if (n3 % 10 == 0) {
+                    number2.src = "../images/" + n2 + ".png";
+                    n2++;
+
+                    if (n2 > 9) {
+                        n2 = 0;
+                    }
+                }
+
+                n5++;
+                if (n5 % 10 == 0) {
+                    n4++;
+                }
+                txt1.value = n4 + "" + n5;
+
+                if (n5 > 9) {
+                    n5 = 0;
+                }
+
+                console.log(n5);
+            };
+        </script>
+    </body>
+</html>

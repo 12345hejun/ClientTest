@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .img {
+                border: 10px solid #999;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="form" id="form" style="width: 500px;">
+            <img src="../images/rect_icon01.png" name="img1" class="img" />
+            <img src="../images/rect_icon02.png" name="img2" class="img" />
+            <img src="../images/rect_icon03.png" name="img3" class="img" />
+            <img src="../images/rect_icon04.png" name="img4" class="img" />
+            <img src="../images/rect_icon05.png" name="img5" class="img" />
+            <img src="../images/rect_icon06.png" name="img6" class="img" />
+            <img src="../images/rect_icon07.png" name="img7" class="img" />
+            <img src="../images/rect_icon08.png" name="img8" class="img" />
+            <img src="../images/rect_icon09.png" name="img9" class="img" />
+
+            <input
+                type="button"
+                value="RESET"
+                name="reset"
+                style="width: 225px; border: 10px solid #999;"
+            />
+            <input
+                type="button"
+                value="INPUT"
+                name="input"
+                style="width: 225px; border: 10px solid #999;"
+            />
+        </form>
+
+        <script>
+            for (var i = 1; i <= 9; i++) {
+                var img = document.images["img" + i];
+
+                img.onmouseover = function () {
+                    // img.src = "../images/rect_icon10.png";
+                    event.srcElement.src = "../images/rect_icon10.png";
+                };
+            }
+
+            var reset = document.all.reset;
+
+            reset.onclick = function () {
+                for (var i = 1; i <= 9; i++) {
+                    var img = document.images["img" + i];
+                    img.src = "../images/rect_icon0" + i + ".png";
+                }
+            };
+
+            var input = document.all.input;
+
+            input.onclick = function () {
+                console.log(document.images["img1"].src.substr(29));
+                console.log(document.images["img1"].src);
+
+                if (document.images["img1"].src.substr(29) == 1) {
+
+                // if( document.images["img1"].src ) {
+
+                child = window.open(
+                    // 창 열기
+                    "http://google.com/",
+                    "google",
+                    "width=300, height=300" //새창 크기
+                );
+
+                }
+
+            }
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        #main {
+            /* border: 1px solid black; */
+            width: 600px;
+            height: 160px;
+        }
+
+        #left {
+            /* border: 1px solid black; */
+            width: 140px;
+            height: 160px;
+            float: left;
+            background-color: #999;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        #right {
+            /* border: 1px solid black; */
+            width: 455px;
+            height: 160px;
+            float: left;
+        }
+
+        .name {
+            border: 1px solid black;
+            width: 137px;
+            height: 50px;
+        }
+
+        .text {
+            border: 1px solid black;
+            width: 455px;
+            height: 50px;
+        }
+    </style>
+    <body>
+        <div id="main">
+            <div id="left">
+                <div class="name">우편번호</div>
+                <div class="name">주소</div>
+                <div class="name">상세주소</div>
+            </div>
+            <div id="right">
+                <div class="text">
+                    <input type="text" name="text1" id="text1" />
+                    <input
+                        type="button"
+                        value="우편번호 검사하기"
+                        name="button"
+                    />
+                </div>
+
+                <div class="text">
+                    <input
+                        type="text"
+                        name="text2"
+                        id="text2"
+                        style="width: 420px; height: 15px; margin: 10px;"
+                    />
+                </div>
+
+                <div class="text">
+                    <input
+                        type="text"
+                        name="text3"
+                        id="text3"
+                        style="width: 420px; height: 20px; margin: 10px;"
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var btn = document.all.button;
+        var child;
+
+        btn.onclick = function () {
+            child = window.open(
+                "javaScript_4_1.html",
+                "naver",
+                "width=300, height=300" //새창 크기
+            );
+        };
+    </script>
+</html>

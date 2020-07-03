@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form name="form">
+            <img src="../images/catty01.png" id="cat1" width="150" />
+            <img src="../images/catty02.png" id="cat2" width="150" />
+            <img src="../images/catty03.png" id="cat3" width="150" />
+            <img src="../images/catty04.png" id="cat4" width="150" />
+            <img src="../images/catty05.png" id="cat5" width="150" />
+        </form>
+
+        <script>
+            var cat1 = document.form.cat1;
+            var cat2 = document.form.cat2;
+            var cat3 = document.form.cat3;
+            var cat4 = document.form.cat4;
+            var cat5 = document.form.cat5;
+
+            cat1.onmouseover = function () {
+                cat1.width += 10;
+            };
+
+            cat1.onclick = function () {
+                if (confirm("reser??") == true) {
+                    cat1.width = "150";
+                }
+            };
+
+            cat2.onmouseover = function () {
+                cat2.width += 10;
+            };
+
+            cat2.onclick = function () {
+                if (confirm("reser??") == true) {
+                    cat2.width = "150";
+                }
+            };
+
+            cat3.onmouseover = function () {
+                cat3.width += 10;
+            };
+
+            cat3.onclick = function () {
+                if (confirm("reser??") == true) {
+                    cat3.width = "150";
+                }
+            };
+
+            cat4.onmouseover = function () {
+                cat4.width += 10;
+            };
+
+            cat4.onclick = function () {
+                if (confirm("reser??") == true) {
+                    cat4.width = "150";
+                }
+            };
+
+            cat5.onmouseover = function () {
+                cat5.width += 10;
+            };
+
+            cat5.onclick = function () {
+                if (confirm("reser??") == true) {
+                    cat5.width = "150";
+                }
+            };
+
+            event.srcElement.dataset;
+        </script>
+    </body>
+</html>

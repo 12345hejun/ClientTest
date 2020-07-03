@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        #form {
+            border: 1px solid;
+            width: 150px;
+            height: 100px;
+            float: left;
+        }
+
+        .button {
+            margin: 3.5px;
+        }
+    </style>
+
+    <body>
+        <form id="form" name="form">
+            <input
+                type="button"
+                value="서울시 강남구 역삼동"
+                class="button1"
+                id="button1"
+            />
+            <input
+                type="button"
+                value="서울시 강남구 대치동"
+                class="button2"
+                id="button2"
+            />
+            <input
+                type="button"
+                value="서울시 강남구 도곡동"
+                class="button3"
+                id="button3"
+            />
+        </form>
+    </body>
+
+    <script>
+        var button1 = document.form.button1;
+        var button2 = document.form.button2;
+        var button3 = document.form.button3;
+
+        button1.onclick = function () {
+            opener.document.all.text1.value = "06232";
+            opener.document.all.text2.value = "서울시 강남구 역삼동";
+            window.close();
+        };
+
+        button2.onclick = function () {
+            opener.document.all.text1.value = "06291";
+            opener.document.all.text2.value = "서울시 강남구 대치동";
+            window.close();
+        };
+
+        button3.onclick = function () {
+            opener.document.all.text1.value = "06267";
+            opener.document.all.text2.value = "서울시 강남구 도곡동";
+            window.close();
+        };
+    </script>
+</html>

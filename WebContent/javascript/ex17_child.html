@@ -24,7 +24,8 @@
             window.document.form1.btnUse.onclick = function () {
                 // 부모창 텍스트박스 = window.document.form1.txtID.value;
                 //opener: 부모창의 window 객체
-                opener.document.form2.txtID = window.document.form1.txtID.value;
+                opener.document.form2.txtID.value =
+                    window.document.form1.txtID.value;
                 window.close();
             };
 
